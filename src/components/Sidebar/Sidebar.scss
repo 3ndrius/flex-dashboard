@@ -5,15 +5,14 @@
     width:360px;
     height: 1080px;
     background:$clr-03;
-    margin-bottom: 20px;   
     &-header{
-        padding: 0 0 32px 32px;
+        padding: 0 32px 32px 32px;
         border-bottom: 1px solid $clr-04;
+        box-sizing: border-box;
         &__wrap{
             height:120px;
             display:flex;
-            align-items: center;
-            
+            align-items: center;   
         }
         &__heading{
             border-left: 1px solid $clr-04;
@@ -25,7 +24,6 @@
             margin-right:23px;
         }        
     }
-
 
     &-navigation{
         margin-top: 32px;
