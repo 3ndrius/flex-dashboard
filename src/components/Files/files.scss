@@ -5,4 +5,20 @@
     height: 269px;
     border-radius: 5px;
     background-color:$clr-03;
+
+    &__header{
+
+        h4{
+            margin: 0;
+        }
+    }
+
+    &__container{
+        display: flex;
+        
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+    }
 }

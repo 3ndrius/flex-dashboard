@@ -9,19 +9,28 @@ export default function Filter() {
                 <h3>Filters</h3>
             </header>
             <div className="filters__container">
-                <h4>SHOW</h4>
+                
                 <div className="filters__wrap">
-                    <input type="checkbox"/>
-                    <input type="checkbox"/>
-                    <input type="checkbox"/>
+                <h4>SHOW</h4>
+                    <ul className="filters__list">
+                    <li className="filters__item"><input type="checkbox"/ ><span className="checkmark"></span> Status Details</li>
+                    <li className="filters__item"><input type="checkbox" defaultChecked/><span className="checkmark"></span> Statistics</li>
+                    <li className="filters__item"><input type="checkbox" defaultChecked/><span className="checkmark"></span> Users </li>
+                    </ul>
                 </div>
-                <h4>CLIENT</h4>
-                <select>
+               <div className="filters__wrap">
+               <h4>CLIENT</h4>
+                <select className="filters__select">
                     <option value="default">- Select -</option>
                     <option value="opt1">Users</option>
                 </select>
-                <Button title="Applay Filters" light />
+               </div>
+              
             </div>
+            <div className="filters__button">
+            <Button title="Applay Filters" light />
+            </div>
+            
         </section>
     )
 }

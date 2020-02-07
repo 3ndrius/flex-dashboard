@@ -2,14 +2,15 @@
 
 
 .wrapper{
-    max-width: 1560px;
-    border:1px solid red;
+    max-width: 1464px;
     display: flex;
     flex-direction: column;
 
-    &--inner{
-        flex-direction: row;
-    }
+   
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
 }
 .dot{
     width:5px;
@@ -58,5 +59,20 @@
             font-weight: $f-weight-regular;
         }
     }
+
+    .span1{
+
+    }
+    .span2{
+    
+    }
+    .span3{
+       @include flexS;
+       max-width: 1040px;
+       margin-left:24px;
+    
+    }
+
+
 
 }
