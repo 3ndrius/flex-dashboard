@@ -1,11 +1,20 @@
 
-
-.btn{
-
+@mixin flexS {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@mixin flexes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin wrapper {
+    max-width: 1560px;
+    padding:0 48px;
+}
+
+@mixin font-awesome($content){
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    content: $content;
 }

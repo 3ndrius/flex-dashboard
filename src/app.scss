@@ -1,0 +1,13 @@
+@import './assets/scss/all.scss';
+
+.App{
+    display:inline-flex;
+    width:100%;
+    .container{
+        display:flex;
+        height: 1080px;
+        width:100%;
+        background:$clr-04;
+    }
+      
+}

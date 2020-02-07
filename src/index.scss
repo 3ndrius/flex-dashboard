@@ -1,1 +1,14 @@
+
 @import './assets/scss/all.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+    color: $clr-01;
+    font-family:$f-family;
+    box-sizing: border-box;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+}

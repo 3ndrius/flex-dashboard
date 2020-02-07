@@ -1,0 +1,101 @@
+@import '../../assets/scss/all.scss';
+
+
+.sidebar{
+    width:360px;
+    height: 1080px;
+    background:$clr-03;
+    &-header{
+        padding: 0 32px 32px 32px;
+        border-bottom: 1px solid $clr-04;
+        box-sizing: border-box;
+        &__wrap{
+            height:120px;
+            display:flex;
+            align-items: center;   
+        }
+        &__heading{
+            border-left: 1px solid $clr-04;
+            padding-left:22px;
+            font-weight: 400;
+            font-size:1em;
+        }
+        img{
+            margin-right:23px;
+        }        
+    }
+
+    &-navigation{
+        margin-top: 32px;
+
+        &__list{
+            list-style-type: none;
+        }
+        &__item{
+            transition: all .4s ease-in-out ;
+                padding:8px 0 8px 32px;
+                line-height: 24px;
+                &--active{
+                    background:$clr-02-1;
+                    border-right:1px solid $clr-02;
+                    color:$clr-02;   
+                }
+                &:hover{
+                    background:$clr-02-1;
+                    border-right:1px solid $clr-02;
+                    color:$clr-02;
+                    cursor: pointer;
+                    padding-left:45px;
+                }
+        }
+    }
+    &-footer{
+        align-self: flex-end;
+        padding:0 0 0 32px;
+        margin-top: 32px;
+        height: 108px;
+        width:100%;
+        box-sizing: border-box;
+        border-top:1px solid $clr-04;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:180px;
+        
+        &__icon{
+            margin-right: 28px;
+            height:14px;
+            width:auto;
+        }
+        &__container{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+
+            img{
+                height: 40px;
+                width:40px;
+                object-fit: contain;
+                margin-right: 24px;
+            }
+        }
+        &__wrap{
+
+        }
+        &__heading{
+            font-size: 1em;
+            margin: 0;
+            font-weight:$f-weight--medium;
+            color:$clr-06;
+            font-size:0.8em;
+            line-height: 24px;
+            
+        }
+        &__paragraph{
+            margin: 0;
+            line-height: 24px;
+        }
+    }
+    
+}
