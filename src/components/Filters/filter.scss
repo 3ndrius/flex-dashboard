@@ -1,0 +1,111 @@
+@import '../../assets/scss/all.scss';
+
+.filters{
+    height: 475px;
+    width:400px;
+    background: $clr-03;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    
+    &__header{
+        border-bottom:1px solid $clr-04;
+        height: 64px;
+        margin-bottom: 4px;
+        h3{
+            margin: 0;
+            font-size:1em;
+            font-weight: $f-weight-regular;
+            padding:20px 0 20px 24px;
+        }
+    }
+    &__container{
+        padding-left:24px;
+        height: 310px;
+        h4{
+            margin:0;
+            font-size: 0.75em;
+            color:$clr-06;
+            padding-bottom: 18px;
+           
+        }
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        padding-top:14px;
+        
+
+    }
+    &__list{
+        list-style-type: none;
+        margin-bottom: 0;
+        
+    }
+    &__item{
+        font-size: 1em;
+        position: relative;
+        margin:0 0 20px 0;
+        &:first-child{
+            color:$clr-06;
+            input ~ .checkmark{
+                border: solid 2px #d0d2d2;
+            }
+        }
+        input{
+            margin-right: 10px;
+        }
+      
+        input:checked ~ .checkmark {
+            background-color: $clr-02;
+            
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            
+          }
+          .checkmark:after {
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          input:checked ~ .checkmark:after {
+            display: block;
+            
+          }
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            
+          }
+    }
+    &__select{
+        width: 352px;
+        height: 48px;
+        border-radius: 4px;
+        border: solid 1px $clr-04;
+        font-size: .85em;
+        color:$clr-06;
+        margin-bottom: 66px;
+        padding-left: 10px;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+        border-top:1px solid $clr-04;
+    }
+}

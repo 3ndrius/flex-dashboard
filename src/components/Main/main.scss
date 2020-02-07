@@ -1,0 +1,78 @@
+@import '../../assets/scss/all.scss';
+
+
+.wrapper{
+    max-width: 1464px;
+    display: flex;
+    flex-direction: column;
+
+   
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dot{
+    width:5px;
+    height: 5px;
+    margin:0 2.5px;
+    background: $clr-02;
+    border-radius: 50%;
+}
+.dashboard{
+    margin-left:48px;
+    margin-right: 48px;
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 96px;
+
+        &__wrap{
+            width:316px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__heading{
+            font-size:1.5em;
+        }
+    }
+
+
+    //end header
+    &-title{
+        @include flexS;
+        height: 64px;
+        background: $clr-03;
+        border-radius: 5px;
+        margin-bottom: 24px;;
+        &__dropdown{
+            @include flexC;
+            width:72px;
+            border-left:1px solid $clr-04;
+            height: 100%;
+            line-height: 24px;
+        }
+        &__header{
+            margin-left:22px;
+            font-size:1em;
+            font-weight: $f-weight-regular;
+        }
+    }
+
+    .span1{
+
+    }
+    .span2{
+    
+    }
+    .span3{
+       @include flexS;
+       max-width: 1040px;
+       margin-left:24px;
+    
+    }
+
+
+
+}
