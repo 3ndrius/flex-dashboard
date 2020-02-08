@@ -8,48 +8,50 @@
     margin-bottom: 24px;
     
     &__header{
-        border-bottom:1px solid $clr-04;
-        height: 64px;
-        margin-bottom: 4px;
+       
         h3{
             margin: 0;
             font-size:1em;
             font-weight: $f-weight-regular;
             padding:20px 0 20px 24px;
+            line-height: 24px;
         }
     }
     &__container{
         padding-left:24px;
-        height: 310px;
+        border-top:1px solid $clr-04;
+        padding-top:24px;
+        box-sizing: border-box;
+        height: 315px;
+        border-bottom:1px solid $clr-04;
         h4{
             margin:0;
             font-size: 0.75em;
             color:$clr-06;
-            padding-bottom: 18px;
-           
+            padding-bottom: 16px;
+           padding-top:10px;
         }
-    }
-    &__wrap{
-        display: flex;
-        flex-direction: column;
-        padding-top:14px;
-        
-
     }
     &__list{
         list-style-type: none;
-        margin-bottom: 0;
+        margin-bottom: 24px;
         
     }
     &__item{
         font-size: 1em;
         position: relative;
-        margin:0 0 20px 0;
         &:first-child{
             color:$clr-06;
+            margin-top:2px;
             input ~ .checkmark{
+                height: 16px;
+                width:16px;
                 border: solid 2px #d0d2d2;
+                
             }
+        }
+        &:nth-child(2){
+            margin: 20px 0;
         }
         input{
             margin-right: 10px;
@@ -63,14 +65,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 18px;
-            width: 18px;
+            height: 20px;
+            width: 20px;
             background-color: rgb(255, 255, 255);
             border-radius: 2px;
             
           }
           .checkmark:after {
-            left: 5px;
+            left: 6px;
             top: 1px;
             width: 5px;
             height: 10px;
@@ -98,14 +100,12 @@
         border: solid 1px $clr-04;
         font-size: .85em;
         color:$clr-06;
-        margin-bottom: 66px;
         padding-left: 10px;
     }
     &__button{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 95px;
-        border-top:1px solid $clr-04;
+        height: 96px;
     }
 }

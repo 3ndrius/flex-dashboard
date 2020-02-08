@@ -9,7 +9,8 @@ export default function Plan() {
             <p className="plan__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut leo tincidunt, pellentesque turpis eget, posuere ex. Cras interdum velit id pretium semper.</p>
             <div className="plan__wrap">
                 <button className="plan__btn">Dismiss</button>
-                <button className="plan__btn--full">See Plans</button>
+                <button className="plan__btn plan__btn--full">d</button>
+                <button className="plan__btn plan__btn--grad">See Plans</button>
             </div>
         </section>
     )
