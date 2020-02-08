@@ -7,18 +7,73 @@
     background-color:$clr-03;
 
     &__header{
+        padding: 22px 24px;
 
+        
+        @include flexS;
         h4{
             margin: 0;
+            font-weight: $f-weight-regular;
+        
+            font-size: 1em;
+        }
+        img{
+          
         }
     }
 
     &__container{
-        display: flex;
-        
+       padding: 23px 24px;
+       border-top:1px solid $clr-04;
+       h4{
+        margin: 0;
+        padding-bottom: 15px;
+        font-size: 0.75em;
+        color:$clr-06;
+
+       }   
     }
     &__wrap{
         display: flex;
         flex-direction: row;
+        ul{
+            @include flexS;
+            flex-wrap: wrap;
+            width:201px;
+            margin-left: 25px;
+            list-style-type: none;
+            
+            li{
+                width:51px;
+                height: 51px;
+                @include flexC;
+                border-radius:4px;
+
+                &:nth-child(3){
+                    background: $clr-002;
+                }
+                &:nth-child(4){
+                    background: $clr-001;
+                }
+                &:nth-child(5){
+                    background: $clr-005;
+                }
+     
+            }
+            
+        }    
     }
+    &__box{
+        width: 126px;
+        height: 126px;
+        border-radius: 4px;
+        background-color: $clr-005;
+        @include flexC;
+        img{
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+    }
+  
 }
