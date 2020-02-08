@@ -7,7 +7,7 @@ import './widget.scss';
 export default function Widget() {
     return (
         <section className="widget">
-            <span>+ <p>Add New Widget</p></span> 
+            <p>+ <span>Add New Widget</span></p>
         </section>
     )
 }
