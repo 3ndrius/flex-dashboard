@@ -8,11 +8,14 @@
             @include flexS;
             height: 100%;   
     }
+    &__wrapper{
+        @include flexC;
+    }
     &__search{
-        width: 260px;
+        width: 10px;
         height: 40px;
         border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0);
         border:none;
         padding-left:10px;
         font-size:0.9em;
@@ -21,14 +24,21 @@
         color:$clr-03;
         z-index: 1;
         background-image: url('../../assets/images/search.png');
-        background-position: 240px 12px;
+        background-position: 2px 12px;
         background-repeat:  no-repeat;
         font-family:$f-family;
+        margin-right: 12px;
+        &:focus{
+            width: 200px;
+            height: 40px;
+            background-position: 180px 12px;
+        }
         &::placeholder{
             color:$clr-03;
             font-size: 0.9em;
             line-height: 22px;
             font-family:$f-family;
+            opacity: 0;
         }     
     }
     &__button{
@@ -43,5 +53,77 @@
         span{
             color:$clr-02;
         }
-    }    
+    } 
+    &__hamburger{
+        height: 40px;
+        width:40px;
+        background:rgba(255, 255, 255, 0.103);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:none;
+        border-radius: 5px;
+        
+        
+        span{
+            height: 2px;
+            width:16px;
+            background: white;
+            position: relative;
+            &::before{
+                position: absolute;
+                top:5px;
+                left:0;
+                content: '';
+                height: 100%;
+                width:100%;
+                background: white;
+            }
+            &::after{
+                position: absolute;
+                top:-5px;
+                left:0;
+                content: '';
+                height: 100%;
+                width:100%;
+                background: white;
+            }
+        }
+       
+    } 
+    &__logo{
+        margin-right: 24px;
+        height: 41px;
+        width:41px;
+    }  
+}
+@media(min-width:1920px) {
+    .header{
+        
+        &__wrap{
+                
+        }
+        &__search{
+            width: 260px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            background-position: 240px 12px;
+          
+            margin-right: 12px;
+            &::placeholder{
+              opacity: 1;
+            } 
+        }
+
+        &__hamburger{
+            display: none;
+        }
+        &__logo{
+            margin-right: 24px;
+            height: 41px;
+            width:41px;
+            display: none;
+        }  
+    }
 }
