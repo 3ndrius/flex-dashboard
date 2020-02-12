@@ -1,13 +1,12 @@
 @import '../../assets/scss/all.scss';
 
 .tabs{
-    
-        width: 1040px;
+        max-width: 720px;
         height: 372px;
         border-radius: 5px;
         background-color:$clr-03;
         margin-bottom: 24px;
-        margin-left: 24px;
+
         &__header{
                 border-bottom:1px solid $clr-04;
         }
@@ -29,10 +28,7 @@
                 color:$clr-01;
              }
         }
-
-
         &__wrap{
-                
                 margin:20px 24px;
                 overflow-y: auto;
                 overflow-x: scroll;
@@ -42,21 +38,17 @@
                
                       &::-webkit-scrollbar {
                         width: 5px;
-                        height: 8px;
-                        
+                        height: 8px;   
                       }
                       &::-webkit-scrollbar-track {
                         background: $clr-03;
-                       
-                        
+                         
                       }
                       &::-webkit-scrollbar-thumb {
                         background: $clr-04;
                         border-radius: 10px;
-                       
                         
-                      }
-                     
+                      }            
 
         }
                 table{       
@@ -114,3 +106,10 @@
                 }
         
 }  
+@media(min-width:1560px) {
+        .tabs{  
+                max-width: 1040px;
+                margin-bottom: 0;
+                margin-left: 24px;
+        }
+}

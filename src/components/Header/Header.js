@@ -3,7 +3,7 @@ import React from 'react'
 import './header.scss';
 import Logo from '../../assets/images/ingenious-sygnet.png';
 
-export default function Header() {
+export default function Header({menuSwitch}) {
     return (
         <header className="header">
            <div className="header__wrap">
@@ -13,7 +13,7 @@ export default function Header() {
             </div>
             <div className="header__wrapper">
             <input type="text" className="header__search" placeholder="Search..."/>
-            <button className="header__hamburger">
+            <button className="header__hamburger" onClick={menuSwitch}>
                 <span className="stripe"></span>
             </button>
             </div>

@@ -2,8 +2,9 @@
 @import '../../assets/scss/all.scss';
 
 .plan{
-        width: 509px;
-        height: 248px;
+        max-width: 720px;
+        width:100%;
+        height: 224px;
         border-radius: 5px;
         background: rgba(43,144,244,1);
         background: -moz-linear-gradient(left, rgba(43,144,244,1) 0%, rgba(137,61,209,1) 100%);
@@ -19,6 +20,8 @@
         padding:32px 24px 24px 24px;
         box-sizing: border-box;
         color:$clr-03;
+        margin:24px 0;
+      
 
         &__heading{
                 line-height: 32px;
@@ -65,4 +68,13 @@
         }
 
 
+}
+
+@media(min-width:1560px) {
+        .plan{
+                width: 509px;
+                height: 248px;
+                margin-left: 24px;
+                margin: 0;
+        }
 }

@@ -9,7 +9,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
         <header className="sidebar-header">
-        <span class="sidebar-header__wrap">
+        <span className="sidebar-header__wrap">
             <img src={Logo}  alt="logo"/>
             <h1 className="sidebar-header__heading">Recruitment Task</h1>
         </span>

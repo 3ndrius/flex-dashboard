@@ -1,12 +1,14 @@
 @import '../../assets/scss/all.scss';
 
 .widget{
-    width: 507px;
-    height: 248px;
+    max-width: 720px;
+    width: 100%;
+    height: 200px;
     border-radius: 5px;
     border: dashed 1px #acaeaf;
     @include flexC;
     background: transparent;
+    margin:24px 0;
     p{
         margin-left:7px;
         line-height: 24px;
@@ -15,5 +17,16 @@
             color:$clr-01;
             font-size:1em;
         }
+    }
+}
+
+
+@media(min-width:1560px) {
+    .widget{
+        width: 507px;
+        height: 248px;
+        margin: 0;
+       
+        
     }
 }

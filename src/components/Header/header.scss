@@ -4,7 +4,7 @@
     background:$clr-05;
     width:100%;
     &__wrap{
-            @include wrapper;
+            @include wrapperM;
             @include flexS;
             height: 100%;   
     }
@@ -63,6 +63,10 @@
         align-items: center;
         border:none;
         border-radius: 5px;
+        &:hover{
+            cursor: pointer;
+            background:rgba(255, 255, 255, 0.205);
+        }
         
         
         span{
@@ -97,6 +101,17 @@
         width:41px;
     }  
 }
+
+@media(min-width:1465px){
+    .header{
+        &__wrap{
+                @include wrapper; 
+        }
+    }
+}
+
+
+
 @media(min-width:1920px) {
     .header{
         
@@ -109,8 +124,8 @@
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.1);
             background-position: 240px 12px;
-          
-            margin-right: 12px;
+            margin:0;
+        
             &::placeholder{
               opacity: 1;
             } 
