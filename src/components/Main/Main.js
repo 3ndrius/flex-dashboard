@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '../Button/Button';
 import Filters from '../Filters/Filter';
 import Boxes from '../Boxes/Boxes';
@@ -11,6 +11,22 @@ import Tabs from '../Tabs/Tabs';
 import Plan from '../Plan/Plan';
 
 export default function Main() {
+    const [display, setDisplay] = useState(false);
+
+    useEffect(() => {
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+              setDisplay(false)
+            } else {
+              setDisplay(true);
+            }
+          }
+          
+          let x = window.matchMedia("(min-width: 1560px)")
+          myFunction(x) // Call listener function at run time
+          x.addListener(myFunction) 
+       
+      });
     return (
         <main className="dashboard">
             <div className="wrapper">
@@ -31,23 +47,22 @@ export default function Main() {
                     </div>
                 </section>
                 <div className="content">
-                    <div className="span1">
                     <Filters />
+                    {
+                    !display ? <div className="span-wrap"> 
+                         <Boxes/>
+                        <Tabs />
+                    </div> :
+                        <React.Fragment>
+                            <Boxes/>
+                        <Tabs />
+                        </React.Fragment>
+                    }
                     <Files />
+                    <div className="span">
+                    <Plan />
+                    <Widget />
                     </div>
-
-
-                   <div className="span2">
-                   <Boxes/>
-                  
-                    
-                  <Tabs />
-                  <div className="span3">
-                  <Plan />
-                  <Widget />
-                  </div>
-                   </div>
-            
                 </div>
             </div>
         </main>

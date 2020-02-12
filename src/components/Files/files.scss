@@ -1,24 +1,19 @@
 @import '../../assets/scss/all.scss';
 
 .files{
-    width: 400px;
-    height: 269px;
+    max-width: 720px;
+    width:100%;
+    height: 195px;
     border-radius: 5px;
     background-color:$clr-03;
 
     &__header{
         padding: 22px 24px;
-
-        
         @include flexS;
         h4{
             margin: 0;
             font-weight: $f-weight-regular;
-        
             font-size: 1em;
-        }
-        img{
-          
         }
     }
 
@@ -38,7 +33,7 @@
         flex-direction: row;
         ul{
             @include flexS;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             width:201px;
             margin-left: 25px;
             list-style-type: none;
@@ -48,15 +43,20 @@
                 height: 51px;
                 @include flexC;
                 border-radius:4px;
+                margin-right: 24px;
 
                 &:nth-child(3){
                     background: $clr-002;
+                    padding:0 13.5px;
+                    
                 }
                 &:nth-child(4){
                     background: $clr-001;
+                    padding:0 13.5px;
                 }
                 &:nth-child(5){
                     background: $clr-005;
+                    padding:0 13.5px;
                 }
      
             }
@@ -64,16 +64,63 @@
         }    
     }
     &__box{
-        width: 126px;
-        height: 126px;
+        width:51px;
+        height:51px;
         border-radius: 4px;
         background-color: $clr-005;
         @include flexC;
         img{
-            width: 48px;
-            height: 48px;
+            width: 24px;
+            height: 24px;
             object-fit: contain;
         }
     }
   
+}
+
+@media(min-width:1560px) {
+    
+    .files{
+        max-width: 400px;
+        width:100%;
+        height: 269px;
+        border-radius: 5px;
+        margin-top:3px;
+        background-color:$clr-03;
+        &__wrap{
+             ul{
+                flex-wrap: wrap;
+
+                li{
+                    width:51px;
+                    height: 51px;
+                    @include flexC;
+                    border-radius:4px;
+                    margin-right:0;
+                    &:nth-child(3){
+                        padding: 0;
+                    }
+                    &:nth-child(4){   
+                        padding: 0;
+                    }
+                    &:nth-child(5){  
+                        padding: 0;
+                    }
+         
+                }
+            }
+        
+        }
+
+        &__box{
+            width: 126px;
+            height: 126px;
+            img{
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+            }
+        }
+
+    }
 }

@@ -2,10 +2,11 @@
 
 .boxes{
     @include flexS;
-    width: 1040px;
-    height:100px;
-    margin-left:24px;
+    width: 242px;
+    height:472px;
     margin-bottom:24px;
+    flex-direction: column;
+    margin-left: 24px;
     &__wrap{
         width: 242px;
         height: 100px;
@@ -47,4 +48,25 @@
             }
         }
       
+}
+
+@media(min-width:1560px){
+
+    .boxes{
+        @include flexS;
+        width: 1040px;
+        height:100px;
+        margin-left:24px;
+        margin-bottom:24px;
+        flex-direction: row;
+        &__wrap{
+            width: 242px;
+            height: 100px;
+            border-radius: 5px;
+            background-color: $clr-03;
+            display:flex;
+            align-items: center;
+        }
+    }    
+    
 }
