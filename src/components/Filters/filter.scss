@@ -95,7 +95,7 @@
           }
     }
     &__select{
-        width: 352px;
+        width: 406px;
         height: 48px;
         border-radius: 4px;
         border: solid 1px $clr-04;
@@ -115,5 +115,8 @@
     .filters{
         max-width: 400px;
        
+        &__select{
+            width: 352px;
+        }
     }
 }

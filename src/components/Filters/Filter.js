@@ -28,7 +28,7 @@ export default function Filter() {
               
             </div>
             <div className="filters__button">
-            <Button title="Applay Filters" light />
+            <Button title="Applay Filters" light/>
             </div>
             
         </section>

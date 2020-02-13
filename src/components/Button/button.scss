@@ -14,7 +14,7 @@
     &-light{
     background:rgba(42, 143, 244, 0.2);
     color: #2b8ff4;
-    width:352px;
+    width:406px;
     }
     &-short{
        &--light{
@@ -27,6 +27,13 @@
         border:2px solid rgba(42, 143, 244, 0.2);
        }    
     } 
+}
+@media(min-width: 1560px) {
+    .btn{
+        &-light{
+            width:352px;
+        }
+    }
 }
 
 

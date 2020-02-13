@@ -8,27 +8,42 @@ function App() {
   const [menu, setMenu]  = useState(false);
 
 let handleMenu = () => {
-  setMenu(!menu);
-  document.querySelector('.sidebar').style.positon = "absolute";
-  }
 
+if(menu){
+  document.querySelector('.sidebar').style.display = "none";
+  document.querySelector('.dashboard').classList.remove('dashboard--active');
+  setMenu(false)
+}
+  if(!menu){
+    document.querySelector('.sidebar').style.display = "block";
+    document.querySelector('.sidebar').style.positon = "absolute";
+    document.querySelector('.dashboard').classList.add('dashboard--active');
+
+    setMenu(true)
+    }
+  }
   useEffect(() => {
+
       function myFunction(x) {
           if (x.matches) { // If media query matches
-            document.body.style.color = "yellow";
-           
+              document.querySelector('.sidebar').style.positon = "absolute";
+              document.querySelector('.sidebar').style.display = "block";
+              document.querySelector('.dashboard').classList.remove('dashboard--active');
+              setMenu(false)
+            
           } else {
-            setMenu(false);
-            document.body.style.color = "green";
-            document.querySelector('.sidebar').style.positon = "absolute";
-          
+  
+            if(!menu){
+              document.querySelector('.sidebar').style.display = "none"
+              document.querySelector('.dashboard').classList.remove('dashboard--active');
+            }    
           }
         }
         let x = window.matchMedia("(min-width: 1920px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) 
      
-    });
+    },[menu]);
 
   return (
     <div className="App">

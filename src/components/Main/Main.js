@@ -12,7 +12,7 @@ import Plan from '../Plan/Plan';
 
 export default function Main() {
     const [display, setDisplay] = useState(false);
-
+// add and remove element wrap to organize layout
     useEffect(() => {
         function myFunction(x) {
             if (x.matches) { // If media query matches
