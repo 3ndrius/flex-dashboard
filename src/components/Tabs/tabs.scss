@@ -40,7 +40,6 @@
                 height: 259px;
                 width:672px;
                 box-sizing: border-box;
-                
                       &::-webkit-scrollbar {
                         width: 5px;
                         height: 8px; 
@@ -84,11 +83,7 @@
                         tr{
                              display: flex;
                              padding-left:24px;
-                             border-bottom: 1px solid $clr-04;
-                             
-                            
-                             
-                             
+                             border-bottom: 1px solid $clr-04;      
                         }
 
                         &__body{
@@ -109,15 +104,10 @@
                                        align-items: center;
                                        img{
                                                margin-right:5px;
-                                       }
-
+                                      }
                                 }
-                        }
-                       
-
-                      
-                }
-        
+                        }      
+                }      
 }  
 @media(min-width:1577px) {
         .tabs{  

@@ -48,7 +48,7 @@
     background: rgba(255, 255, 255, 0.1);
     color:$clr-03;
     font-size: 0.9em;
-    border:white;
+    border:$clr-03;
     font-family:$f-family;
         span{
             color:$clr-02;
@@ -57,7 +57,7 @@
     &__hamburger{
         height: 40px;
         width:40px;
-        background:rgba(255, 255, 255, 0.103);
+        background:rgba(255, 255, 255, 0.1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,14 +65,14 @@
         border-radius: 5px;
         &:hover{
             cursor: pointer;
-            background:rgba(255, 255, 255, 0.205);
+            background:rgba(255, 255, 255, 0.20);
         }
         
         
         span{
             height: 2px;
             width:16px;
-            background: white;
+            background: $clr-03;
             position: relative;
             &::before{
                 position: absolute;
@@ -81,7 +81,7 @@
                 content: '';
                 height: 100%;
                 width:100%;
-                background: white;
+                background:$clr-03;
             }
             &::after{
                 position: absolute;
@@ -90,7 +90,7 @@
                 content: '';
                 height: 100%;
                 width:100%;
-                background: white;
+                background: $clr-03;
             }
         }
        
@@ -129,6 +129,11 @@
             &::placeholder{
               opacity: 1;
             } 
+            &:focus{
+                width: 360px;
+                height: 40px;
+                background-position: 340px 12px;
+            }
         }
 
         &__hamburger{
