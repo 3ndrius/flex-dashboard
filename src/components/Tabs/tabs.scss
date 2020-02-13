@@ -7,38 +7,47 @@
         background-color:$clr-03;
         margin-bottom: 24px;
 
-        &__header{
-                border-bottom:1px solid $clr-04;
-        }
-        &__list{
-                list-style-type: none;
-                display:flex;
-        }
-        &__item{
-             color:$clr-07;
-             font-size:1em;
-             line-height: 24px;
-             padding:20px 28px 19px 24px;
-             &:first-child{
+                &__header{
+                        border-bottom:1px solid $clr-04;
+                }
+                &__list{
+                        list-style-type: none;
+                        display:flex;
+                }
+                &__item{
+                color:$clr-07;
+                font-size:1em;
+                line-height: 24px;
                 padding:20px 28px 19px 24px;
-                margin-right:20px;
-             }
-             &--active{
-                border-bottom:2px solid $clr-02;
-                color:$clr-01;
-             }
-        }
-        &__wrap{
+                &:hover{
+                        cursor: pointer;
+                }
+                &:first-child{
+                        padding:20px 28px 19px 24px;
+                        margin-right:20px;
+                }
+                &--active{
+                        border-bottom:2px solid $clr-02;
+                        color:$clr-01;
+                }
+                }
+                &__wrap{
                 margin:20px 24px;
-                overflow-y: auto;
                 overflow-x: scroll;
+                overflow-y: hidden;
                 border:2px solid $clr-04;  
-                border-radius: 5px;
-                padding-bottom:5px;
-               
+                border-radius:5px;
+                height: 259px;
+                width:672px;
+                box-sizing: border-box;
+                
                       &::-webkit-scrollbar {
                         width: 5px;
-                        height: 8px;   
+                        height: 8px; 
+                        &:horizontal{
+                               margin:10px;
+                        } 
+                        
                       }
                       &::-webkit-scrollbar-track {
                         background: $clr-03;
@@ -47,43 +56,46 @@
                       &::-webkit-scrollbar-thumb {
                         background: $clr-04;
                         border-radius: 10px;
-                        
-                      }            
-
-        }
-                table{       
-                       
+                      }          
+                }
+                &__activity{
+                        margin:20px 24px;
+                        height: 259px;
+                        width:672px;
+                }
+                &-table{   
                         width:992px;   
                         padding:0;
-                        margin: 0; 
-                        
-                        th{
+                        margin: 0;                         
+                        &__header{
                                 background: $clr-04;   
                                 height: 62px; 
                                 display:flex;
                                 align-items: center;  
+                                td{
+                                        margin:0;
+                                        padding: 0;
+                                        line-height: 24px;
+                                        font-size:1em;
+                                        font-weight: $f-weight-regular;
+                                        color:$clr-01;
+                                }
                         }
                         tr{
                              display: flex;
                              padding-left:24px;
                              border-bottom: 1px solid $clr-04;
                              
+                            
+                             
+                             
                         }
 
-                        h2{
-                                margin:0;
-                                line-height: 24px;
-                                font-size:1em;
-                                font-weight: $f-weight-regular;
-                                margin-right:92px;
-                                width:137px;
-                                text-align: left;
-                                
+                        &__body{
+                               color:$clr-07;
                         }
-                        tbody{
-                                border:1px solid red;
-                        }
-                                td{     
+                        td
+                        {     
                                 width:167px;   
                                 margin-right:62px;
                                 display: flex;
@@ -101,6 +113,7 @@
 
                                 }
                         }
+                       
 
                       
                 }
@@ -111,5 +124,14 @@
                 max-width: 1040px;
                 margin-bottom: 0;
                 margin-left: 24px;
+
+                &__wrap{
+                        width:992px;
+                        
+                }
+                &__activity{
+                        
+                        width:992px;
+                }
         }
 }
