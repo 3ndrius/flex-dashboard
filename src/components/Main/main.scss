@@ -22,6 +22,23 @@
 .dashboard{
     margin-left:24px;
     margin-right: 24px;
+    position: relative;
+    
+  
+    &--active{
+        margin-right: 0px;
+        overflow: hidden;
+        height: 1000px;
+        &::before{
+            content:'';
+            height:100%;
+            width:100%;
+            position: absolute;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.164);  
+            
+        }
+    }
     &-header{
         display: flex;
         align-items: center;
@@ -36,6 +53,8 @@
         &__heading{
             font-size:1.5em;
         }
+
+        
     }
 
 
@@ -61,15 +80,14 @@
     }
 
 }
-@media(min-width: 1560px) {
+@media(min-width: 1577px) {
 
     .wrapper{
         max-width: 1464px;
     }
     .dashboard{
         margin-left:48px;
-        margin-right: 48px;
-        
+        margin-right: 48px;       
     }
     .content{
         display: flex;

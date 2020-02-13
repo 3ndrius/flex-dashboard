@@ -12,7 +12,7 @@ import Plan from '../Plan/Plan';
 
 export default function Main() {
     const [display, setDisplay] = useState(false);
-
+// add and remove element wrap to organize layout
     useEffect(() => {
         function myFunction(x) {
             if (x.matches) { // If media query matches
@@ -22,7 +22,7 @@ export default function Main() {
             }
           }
           
-          let x = window.matchMedia("(min-width: 1560px)")
+          let x = window.matchMedia("(min-width: 1577px)")
           myFunction(x) // Call listener function at run time
           x.addListener(myFunction) 
        
