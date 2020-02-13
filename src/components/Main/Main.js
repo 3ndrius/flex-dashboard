@@ -22,7 +22,7 @@ export default function Main() {
             }
           }
           
-          let x = window.matchMedia("(min-width: 1560px)")
+          let x = window.matchMedia("(min-width: 1577px)")
           myFunction(x) // Call listener function at run time
           x.addListener(myFunction) 
        
