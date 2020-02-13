@@ -64,13 +64,36 @@
         height: 64px;
         background: $clr-03;
         border-radius: 5px;
-        margin-bottom: 24px;;
-        &__dropdown{
+        margin-bottom: 24px;
+        position: relative;
+       
+        &__dropdown-btn{
             @include flexC;
             width:72px;
             border-left:1px solid $clr-04;
             height: 100%;
             line-height: 24px;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+            background:$clr-03;
+            border-radius: 5px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &__dropdown-content{
+            position: absolute;
+            background: $clr-03;
+            height: 300px;
+            width:300px;
+            top:65px;
+            right:0px;
+            padding:20px;
+            box-sizing: border-box;
+            ul{
+                list-style-type: none;
+            }
         }
         &__header{
             margin-left:22px;

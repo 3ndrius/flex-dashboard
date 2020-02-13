@@ -12,6 +12,7 @@ import Plan from '../Plan/Plan';
 
 export default function Main() {
     const [display, setDisplay] = useState(false);
+    const [drop, setDrop] = useState(false);
 // add and remove element wrap to organize layout
     useEffect(() => {
         function myFunction(x) {
@@ -27,6 +28,9 @@ export default function Main() {
           x.addListener(myFunction) 
        
       });
+      const handleDrop = () =>{
+          setDrop(!drop);
+      }
     return (
         <main className="dashboard">
             <div className="wrapper">
@@ -40,10 +44,17 @@ export default function Main() {
 
                 <section className="dashboard-title">
                     <h2 className="dashboard-title__header">Team Management Dashboard</h2>
-                    <div className="dashboard-title__dropdown">
+                    <button className="dashboard-title__dropdown-btn" onClick={handleDrop}>
                         <div className="dot"></div>
                         <div className="dot"></div>
                         <div className="dot"></div>
+                    </button>
+                    <div className="dashboard-title__dropdown-content" style={drop ? {display:"block"}: {display:'none'}}>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 1</li>
+                            <li>Item 1</li>
+                        </ul>
                     </div>
                 </section>
                 <div className="content">
